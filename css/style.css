@@ -161,6 +161,7 @@ header {
 	margin: 18px 0 0 175px;
 }
 
+label,
 input[type="checkbox"] {
 	display: none;
 }
@@ -1509,6 +1510,7 @@ input[type="checkbox"] {
 .main-footer-twitter-item:hover .main-footer-twitter-text {
 	color: #fff;
 }
+
 .main-footer-twitter-item:hover .main-footer-twitter-time {
 	color: #c7b299;
 }
@@ -1606,7 +1608,6 @@ input[type="checkbox"] {
 
 	body {
 		width: 576px;
-		overflow-x: hidden;
 	}
 
 	header {
@@ -1616,6 +1617,7 @@ input[type="checkbox"] {
 	}
 
 	.header-nav {
+		position: relative;
 		padding: 20px;
 	}
 
@@ -1647,15 +1649,8 @@ input[type="checkbox"] {
 	}
 
 	.mobile-menu input {
-		display: block;
-		width: 50px;
-		height: 50px;
-		position: absolute;
-		top: -7px;
-		right: -5px;
-		z-index: 2;
-		opacity: 0;
 		-webkit-touch-callout: none;
+		display: none;
 	}
 
 	.mobile-menu span {
@@ -1697,6 +1692,16 @@ input[type="checkbox"] {
 		transform: rotate(0deg) scale(0.2, 0.2);
 	}
 
+	.mobile-menu label {
+		display: block;
+		width: 50px;
+		height: 40px;
+		position: absolute;
+		z-index: 5;
+		top: -5px;
+		right: 2%;
+	}
+
 	.mobile-menu input:checked ~ span:nth-last-child(2) {
 		opacity: 1;
 		transform: rotate(-45deg) translate(0px, 0px);
@@ -1704,20 +1709,21 @@ input[type="checkbox"] {
 	}
 
 	.header-nav-list {
+		width: 100%;
 		position: absolute;
 		width: 576px;
 		box-sizing: border-box;
-		margin: 20px 0 0 72px;
+		margin: 0;
 		padding: 20px;
 		flex-direction: column;
 		background-image: url("../img/main_photo_menu.png");
-		transform: translate(-200%, 0%);
+		transform: translate(-200%, 4.3%);
 		transform-origin: 0% 0%;
 		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 	}
 
 	.mobile-menu input:checked ~ ul {
-		transform: translate(-100%, 0%);
+		transform: translate(-87.5%, 4.3%);
 		opacity: 1;
 	}
 
@@ -1805,7 +1811,8 @@ input[type="checkbox"] {
 
 	.purchase {
 		width: 100%;
-		padding: 35px 0 25px 35px;
+		padding: 35px 15px 25px 35px;
+		align-items: center;
 	}
 
 	.purchase-block {
@@ -1824,7 +1831,8 @@ input[type="checkbox"] {
 	}
 
 	.purchase-button {
-		margin: 30px 0 0 55px;
+		margin: 0 0 0 55px;
+		min-height: 33px;
 	}
 
 	/*5Й БЛОК PROJECT 576*/
@@ -1842,15 +1850,17 @@ input[type="checkbox"] {
 	.project-buttons {
 		width: 100%;
 		margin: 35px 0 0 0;
+		display: flex;
+		justify-content: center;
 	}
 
+	.project-btn-all,
 	.project-btn,
 	.project-btn-last {
 		width: 100px;
-	}
-
-	.project-btn-all {
-		width: 70px;
+		min-height: 32px;
+		padding: 2px;
+		box-sizing: border-box;
 	}
 
 	.project-btn-last {
@@ -1859,12 +1869,12 @@ input[type="checkbox"] {
 
 	.project-catalog {
 		flex-direction: column;
-		padding: 0 0 0 80px;
+		padding: 0;
 		margin: 0;
 	}
 
 	.project-catalog-item {
-		margin: 30px 0 0 0;
+		margin: 30px auto 0 auto;
 	}
 
 	.project-catalog-item:nth-child(3) {
@@ -1877,7 +1887,8 @@ input[type="checkbox"] {
 	}
 
 	.project-btn-load {
-		margin: 30px 0 0 195px;
+		display: block;
+		margin: 30px auto 0 auto;
 	}
 
 	/*6Й БЛОК VIDEO 576*/
@@ -1907,14 +1918,14 @@ input[type="checkbox"] {
 	.video-start-btn {
 		width: 80px;
 		height: 80px;
-		margin: -10px 0 0 0;
+		margin: -10px 0 0 -18px;
 	}
 
 	.video-start-btn-img {
 		width: 80px;
 		height: 80px;
 		top: -60px;
-		left: 256px;
+		left: 238px;
 	}
 
 	.video-head {
@@ -1928,7 +1939,7 @@ input[type="checkbox"] {
 
 	.video-time {
 		font-size: 12px;
-		padding: 0 0 0 270px;
+		padding: 0 0 0 260px;
 		margin: 15px 0 0 0;
 	}
 
@@ -1944,15 +1955,18 @@ input[type="checkbox"] {
 	}
 
 	.mobile-content {
+		width: 100%;
 		margin: 0;
 	}
 
 	.mobile-head {
+		width: 100%;
 		text-align: center;
 	}
 
 	.mobile-text {
-		width: 520px;
+		width: 100%;
+		/*		width: 520px;*/
 		text-align: justify;
 	}
 
@@ -1970,7 +1984,8 @@ input[type="checkbox"] {
 
 	.recent-posts {
 		width: 100%;
-		padding: 30px 0 20px 35px;
+		padding: 30px;
+		box-sizing: border-box;
 	}
 
 	.recent-posts-text {
@@ -1983,7 +1998,7 @@ input[type="checkbox"] {
 	}
 
 	.recent-posts-item {
-		margin: 20px 30px 20px 80px;
+		margin: 20px auto 20px auto;
 	}
 
 	.recent-posts-item-link:after {
