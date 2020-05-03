@@ -1130,15 +1130,17 @@ input[type="checkbox"] {
 	border: 5px solid transparent;
 	border-left: 6px solid #c7b299;
 	position: absolute;
-	top: 352px;
+	top: 357px;
 	left: 115px;
 }
 
+/*
 @-moz-document url-prefix() {
 	.recent-posts-item-link:after {
 		top: 357px;
 	}
 }
+*/
 
 .recent-posts-item-link:hover {
 	color: #ffffff;
