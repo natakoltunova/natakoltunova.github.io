@@ -719,12 +719,10 @@ input[type="checkbox"] {
 	border-bottom: 12px solid #362f2d;
 }
 
-.project-catalog-item:hover .project-chain-btn {
-	display: block;
-}
-
+.project-catalog-item:hover .project-chain-btn,
 .project-catalog-item:hover .project-loupe-btn {
 	display: block;
+	cursor: pointer;
 }
 
 .project-img {
@@ -1130,17 +1128,15 @@ input[type="checkbox"] {
 	border: 5px solid transparent;
 	border-left: 6px solid #c7b299;
 	position: absolute;
-	top: 357px;
+	top: 352px;
 	left: 115px;
 }
 
-/*
 @-moz-document url-prefix() {
 	.recent-posts-item-link:after {
 		top: 357px;
 	}
 }
-*/
 
 .recent-posts-item-link:hover {
 	color: #ffffff;
